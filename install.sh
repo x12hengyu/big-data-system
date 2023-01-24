@@ -38,3 +38,14 @@ if [[ $(which java) && $(java -version) ]]; then
     java -version
 fi
 
+# Cassandra, adapted from https://www.hostinger.com/tutorials/set-up-and-install-cassandra-ubuntu/
+wget -q -O - https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
+echo "deb http://www.apache.org/dist/cassandra/debian 40x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list deb http://www.apache.org/dist/cassandra/debian 40x main
+
+sudo apt-get update
+sudo apt install cassandra -y
+
+sudo systemctl enable cassandra
+sudo systemctl start cassandra
+sudo systemctl status cassandra
+
