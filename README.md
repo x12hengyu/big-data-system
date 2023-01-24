@@ -1,4 +1,4 @@
-# big-data-system
+# CS639/544: Big Data System
 
 ## System Requirement
 - Ubuntu 22.04 x86
