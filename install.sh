@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Docker section
-if [[ $(which docker) && $(docker --version) ]]; then
+if [[ $(which docker) ]]; then
     echo "Docker already installed"
+    docker --version
   else
     echo "Install docker"
     # install docker, adapted from https://docs.docker.com/engine/install/ubuntu/
