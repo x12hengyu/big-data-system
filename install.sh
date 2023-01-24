@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Docker section
 if [[ $(which docker) && $(docker --version) ]]; then
     echo "Docker already installed"
   else
@@ -26,5 +27,14 @@ if [[ $(which docker) && $(docker --version) ]]; then
 
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
     sudo docker run hello-world
+fi
+
+# Java
+if [[ $(which java) && $(java -version) ]]; then
+    echo "Java already installed"
+  else
+    echo "Install java"
+    sudo apt-get install openjdk-8-jdk
+    java -version
 fi
 
