@@ -30,8 +30,9 @@ if [[ $(which docker) && $(docker --version) ]]; then
 fi
 
 # Java
-if [[ $(which java) && $(java -version) ]]; then
+if [[ $(which java) ]]; then
     echo "Java already installed"
+    java -version
   else
     echo "Install java"
     sudo apt-get install openjdk-8-jdk
