@@ -59,9 +59,9 @@ fi
 if [[ $(which spark) ]]; then
     echo "Spark already installed"
     else
-    wget https://dlcdn.apache.org/spark/spark-3.2.1/spark-3.2.1-bin-hadoop3.2.tgz
-    tar xvf spark-3.2.1-bin-hadoop3.2.tgz
-    sudo mv spark-3.2.1-bin-hadoop3.2/ /opt/spark 
+    wget https://www.apache.org/dyn/closer.lua/spark/spark-3.2.3/spark-3.2.3-bin-hadoop3.2.tgz
+    tar xvf spark-3.2.3-bin-hadoop3.2.tgz
+    sudo mv spark-3.2.3-bin-hadoop3.2/ /opt/spark 
     # Set Spark environment
     echo "export SPARK_HOME=/opt/spark" >> ~/.bashrc
     echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin" >> ~/.bashrc
