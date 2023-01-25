@@ -54,21 +54,7 @@ if [[ $(which cassandra) ]]; then
     sudo systemctl status cassandra
 fi
 
-
-# Spark, adapted from https://computingforgeeks.com/how-to-install-apache-spark-on-ubuntu-debian/
-if [[ $(which spark) ]]; then
-    echo "Spark already installed"
-    else
-    wget https://www.apache.org/dyn/closer.lua/spark/spark-3.2.3/spark-3.2.3-bin-hadoop3.2.tgz
-    tar xvf spark-3.2.3-bin-hadoop3.2.tgz
-    sudo mv spark-3.2.3-bin-hadoop3.2/ /opt/spark 
-    # Set Spark environment
-    echo "export SPARK_HOME=/opt/spark" >> ~/.bashrc
-    echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin" >> ~/.bashrc
-fi
-
 # clean
 rm -r -f deb 40x main
-rm -r -f *.tgz
 
 
