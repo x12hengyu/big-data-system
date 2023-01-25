@@ -68,7 +68,7 @@ if [[ $(which spark) ]]; then
 fi
 
 # clean
-rm -r deb 40x main
-rm -r *.tgz
+rm -r -f deb 40x main
+rm -r -f *.tgz
 
 
