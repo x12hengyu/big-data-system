@@ -1,4 +1,4 @@
-# CS639/544: Big Data System
+# CS639/544: Intro to Big Data Systems
 
 ## System Requirement
 - Ubuntu 22.04 x86
