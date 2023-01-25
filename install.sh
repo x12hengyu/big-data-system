@@ -3,7 +3,6 @@
 # Docker section
 if [[ $(which docker) ]]; then
     echo "Docker already installed"
-    docker --version
   else
     echo "Install docker"
     # install docker, adapted from https://docs.docker.com/engine/install/ubuntu/
@@ -29,16 +28,16 @@ if [[ $(which docker) ]]; then
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
     sudo docker run hello-world
 fi
+docker --version
 
 # Java
 if [[ $(which java) ]]; then
     echo "Java already installed"
-    java -version
   else
     echo "Install java"
     sudo apt-get install openjdk-8-jdk
-    java -version
 fi
+java -version
 
 # Cassandra, adapted from https://www.hostinger.com/tutorials/set-up-and-install-cassandra-ubuntu/
 if [[ $(which cassandra) ]]; then
